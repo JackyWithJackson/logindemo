@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+
+#关闭themeleaf的缓存，不然在开发过程中修改页面不会立刻生效需要重启
+  themeleaf:
+    cache: false
+
+mybatis:
+  mapper-locations: classpath:Mapper/*.xml  #配置mapper文件位置
+  type-aliases-package: com.example.logindemo.bean #配置实体类的位置
+
+
